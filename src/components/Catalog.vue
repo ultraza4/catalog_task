@@ -2,7 +2,7 @@
     <div class="catalog">
         <h2>Catalog</h2>
         <div class="productItems">
-            <ProductItem v-for="product in sortedProducts" :product="product"/>
+            <ProductItem v-for="product in sortedProducts" :product="product" :key="product.id"/>
         </div>
     </div>
 </template>

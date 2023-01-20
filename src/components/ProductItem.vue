@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapActions, mapMutations, mapState } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 
 export default {
@@ -21,8 +21,11 @@ export default {
     },
     methods: {
         ...mapActions({
-            addToCart: 'addToCart'
-        })
+            addToCartProducts: 'addToCartProducts'
+        }),
+        addToCart(product){
+            this.addToCartProducts(product)
+        }
     },
     computed: {
         ...mapState({

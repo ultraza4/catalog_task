@@ -28,14 +28,11 @@ export default createStore({
     setSearchQuery(state, searchQuery) {
       state.searchQuery = searchQuery
     },
-    setCartProducts(state, products) {
-      state.cartProducts = products;
-    },
     addCartProduct(state, product) {
-      state.cartProducts = [...cartProducts, {...product, qty: 1}]
+      state.cartProducts.push({...product, quantity: 1})
     },
-    addQuantity(state, product) {
-
+    deleteProduct(state,index){
+      state.cartProducts.splice(index,1)
     }
   },
   actions: {
@@ -55,10 +52,11 @@ export default createStore({
         console.log(e)
       }
     },
-    addToCart({state, commit}, product) {
-      if(state.cartProducts.find((item,index) => item.id == product.id)) {
-
-      }
+    addToCartProducts({ commit }, product){
+      commit('addCartProduct', product)
+    },
+    deleteFromCart({commit}, index) {
+      commit('deleteProduct', index)
     }
   },
   modules: {

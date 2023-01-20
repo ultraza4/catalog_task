@@ -7,7 +7,7 @@
       <span class="header-item">Qty</span>
       <span class="header-item">Total</span>
     </header>
-    <CartItem v-for="product in cartProducts" :product="product"/>
+    <CartItem v-for="(product, index) in cartProducts" :product="product" :key="product.id" :index="index"/>
     {{ cartProducts }}
   </div>
 </template>
@@ -32,10 +32,11 @@ export default{
 .cart{
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 header{
   display: grid;
-  grid-template-columns: 6fr 2fr 2fr 2fr;
+  grid-template-columns: 6fr 2fr 2fr 2fr 2fr;
   margin-bottom: 15px;
 }
 .header-item{
