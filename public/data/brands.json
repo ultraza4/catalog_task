@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "title": "Brand 1",
+      "sort": "100",
+      "code": "brand_1"
+    },
+    {
+      "id": 2,
+      "title": "Brand 2",
+      "sort": "200",
+      "code": "brand_2"
+    }
+]
