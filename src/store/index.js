@@ -29,10 +29,32 @@ export default createStore({
       state.searchQuery = searchQuery
     },
     addCartProduct(state, product) {
-      state.cartProducts.push({...product, quantity: 1})
+      if(state.cartProducts.length) {
+        let isProductExists = false;
+        state.cartProducts.map((item) => {
+          if(item.id == product.id){
+            isProductExists = true;
+            item.quantity++
+          }
+        })
+        if(!isProductExists){
+          state.cartProducts.push({...product, quantity: 1})
+        }
+      }else{
+        state.cartProducts.push({...product, quantity: 1})
+      }
+     
     },
     deleteProduct(state,index){
       state.cartProducts.splice(index,1)
+    },
+    increment(state,index){
+      state.cartProducts[index].quantity++
+    },
+    decrement(state,index){
+      if(state.cartProducts[index].quantity > 1){
+        state.cartProducts[index].quantity--
+      }
     }
   },
   actions: {
@@ -57,7 +79,13 @@ export default createStore({
     },
     deleteFromCart({commit}, index) {
       commit('deleteProduct', index)
-    }
+    },
+    incrementCartItem({commit},index){
+      commit('increment',index)
+    },
+    decrementCartItem({commit},index){
+      commit('decrement',index)
+    },
   },
   modules: {
   }

@@ -4,7 +4,7 @@
         <h3>{{ product.title }}</h3>
         <span>Brand {{ product.brand }}</span>
         <span>${{ product.regular_price.value }}</span>
-        <button @click="this.addToCart(this.product)">Add to cart</button>
+        <button @click="this.addToCart(this.product)">Add</button>
     </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
         ...mapActions({
             addToCartProducts: 'addToCartProducts'
         }),
-        addToCart(product){
+        addToCart(product) {
             this.addToCartProducts(product)
         }
     },
@@ -42,6 +42,7 @@ export default {
     padding: 15px 10px;
     border: 1px solid black;
     border-radius: 10px;
+    gap: 5px;
 }
 
 .productImage {
@@ -49,5 +50,10 @@ export default {
     height: 250px;
     object-fit: contain;
     align-self: center;
+}
+
+.catalogItem button {
+    width: 30%;
+    padding: 5px;
 }
 </style>
