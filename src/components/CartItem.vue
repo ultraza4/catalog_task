@@ -11,7 +11,7 @@
                 <Icon icon="ic:baseline-plus" />
             </span>
         </div>
-        <span>${{ this.product.regular_price.value * this.product.quantity }}</span>
+        <span>${{ (this.product.regular_price.value * this.product.quantity).toFixed(2) }}</span>
         <div class="btn" @click="this.deleteProduct(this.index)">
             <Icon icon="bi:trash" />
         </div>
@@ -63,6 +63,7 @@ export default {
     grid-template-columns: 8fr 2fr 2fr 2fr 0.5fr;
     padding: 10px 5px;
     border: 1px solid black;
+    margin-bottom: 15px;
 }
 
 .cartItem span {

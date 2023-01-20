@@ -6,7 +6,7 @@
       "title": "Product 1",
       "regular_price": {
         "currency": "USD",
-        "value": 27.12
+        "value": 9.12
       },
       "image": "/images/1.png",
       "brand": 1
@@ -18,7 +18,7 @@
       "title": "Product 2",
       "regular_price": {
         "currency": "USD",
-        "value": 27.12
+        "value": 13.25
       },
       "image": "/images/1.png",
       "brand": 1
@@ -30,7 +30,7 @@
       "title": "Product 3",
       "regular_price": {
         "currency": "USD",
-        "value": 27.12
+        "value": 50.3
       },
       "image": "/images/1.png",
       "brand": 1
@@ -42,7 +42,7 @@
       "title": "Product 4",
       "regular_price": {
         "currency": "USD",
-        "value": 27.12
+        "value":5.05
       },
       "image": "/images/1.png",
       "brand": 1
@@ -54,7 +54,7 @@
       "title": "Product 5",
       "regular_price": {
         "currency": "USD",
-        "value": 27.12
+        "value": 9.89
       },
       "image": "/images/1.png",
       "brand": 1
@@ -66,7 +66,7 @@
       "title": "Product 6",
       "regular_price": {
         "currency": "USD",
-        "value": 27.12
+        "value": 69.69
       },
       "image": "/images/1.png",
       "brand": 1
@@ -78,7 +78,7 @@
       "title": "Product 7",
       "regular_price": {
         "currency": "USD",
-        "value": 27.12
+        "value": 85.14
       },
       "image": "/images/1.png",
       "brand": 2
@@ -90,7 +90,7 @@
       "title": "Product 8",
       "regular_price": {
         "currency": "USD",
-        "value": 27.12
+        "value": 37.12
       },
       "image": "/images/1.png",
       "brand": 2
@@ -102,9 +102,45 @@
       "title": "Product 9",
       "regular_price": {
         "currency": "USD",
-        "value": 27.12
+        "value": 88.15
       },
       "image": "/images/1.png",
       "brand": 2
+    },
+    {
+      "type": "simple",
+      "id": 10,
+      "sku": "s1",
+      "title": "Product 10",
+      "regular_price": {
+        "currency": "USD",
+        "value": 17.78
+      },
+      "image": "/images/1.png",
+      "brand": 3
+    },
+    {
+      "type": "simple",
+      "id": 11,
+      "sku": "s1",
+      "title": "Product 11",
+      "regular_price": {
+        "currency": "USD",
+        "value": 17.78
+      },
+      "image": "/images/1.png",
+      "brand": 3
+    },
+    {
+      "type": "simple",
+      "id": 12,
+      "sku": "s1",
+      "title": "Product 12",
+      "regular_price": {
+        "currency": "USD",
+        "value": 17.78
+      },
+      "image": "/images/1.png",
+      "brand": 3
     }
   ]

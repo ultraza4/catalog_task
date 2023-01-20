@@ -7,11 +7,14 @@
       <span class="header-item">Qty</span>
       <span class="header-item">Total</span>
     </header>
-    <CartItem v-for="(product, index) in cartProducts" :product="product" :key="product.id" :index="index" />
+    <TransitionGroup name="list" tag="ul" :style="{ padding: 0 }">
+      <CartItem v-for="(product, index) in cartProducts" :product="product" :key="product.id" :index="index" />
+    </TransitionGroup>
     <div class="totalAmount">
       <span>Total: </span>
       <span>${{ cartTotalCost }}</span>
     </div>
+    <button class="checkout">Checkout</button>
   </div>
 </template>
 
@@ -35,7 +38,7 @@ export default {
         }
         return result.reduce((sum, el) => {
           return sum + el
-        })
+        }).toFixed(2)
       } else {
         return 0
       }
@@ -70,5 +73,23 @@ header {
 .totalAmount span {
   font-size: 1.6rem;
   font-weight: bold;
+}
+
+.checkout {
+  font-size: 1.3rem;
+  align-self: flex-end;
+  padding: 5px 30px;
+  margin-right: 150px;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
 }
 </style>

@@ -10,5 +10,11 @@
       "title": "Brand 2",
       "sort": "200",
       "code": "brand_2"
+    },
+    {
+      "id": 3,
+      "title": "Brand 3",
+      "sort": "200",
+      "code": "brand_3"
     }
 ]
